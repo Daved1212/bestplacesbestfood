@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import FoodTile from "./FoodTile";
 
-const FoodIndexContainer = props => {
-  const [food, setFood] = useState([])
+const FoodIndexContainer = (props) => {
+  const [foods, setFoods] = useState([])
   const fetchData = async () => {
     try {
       const response = await fetch("/api/v1/foods")
@@ -12,7 +12,7 @@ const FoodIndexContainer = props => {
         throw error
       }
       const foodData = await response.json()
-      setFood(foodData)
+      setFoods(foodData)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -22,10 +22,8 @@ const FoodIndexContainer = props => {
     fetchData()
   },[])
 
-  const foods = food.map((food) => {
-    return (
-      <FoodTile key={food.id} food={food}/>
-    )
+  const foodInfo = foods.map((food) => {
+    return <FoodTile key={food.id} food={food} />   
   })
 
   return (
@@ -34,7 +32,7 @@ const FoodIndexContainer = props => {
         "People who love to eat are always the best people."
       </div>
         <div className="food-tile">
-          {foods}
+          {foodInfo}
         </div>
     </div>  
   )

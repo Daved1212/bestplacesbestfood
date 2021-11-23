@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const FoodTile = props => {
+const FoodTile = (props) => {
   return (
     <div className="food-tile">
       <Link to={`/foods/${props.food.id}`}>
