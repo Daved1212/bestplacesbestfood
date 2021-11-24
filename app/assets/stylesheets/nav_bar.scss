@@ -10,6 +10,7 @@
 
 .links a {
   color: #f64c72;
+  text-decoration: none;
 }
 
 
@@ -18,6 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-decoration: none;
 }
 
 .nav-bar-1 {
@@ -28,10 +30,12 @@
   font-size: 1.3em;
   color: #f64c72;
   font-family: 'Roboto' , sans-serif;
+  text-decoration: none;
 }
 
 .nav-bar-1 a {
-  color: #f64c72
+  color: #f64c72;
+  text-decoration: none;
 }
 
 .user-link1 {
@@ -42,6 +46,7 @@
   float: left;
   margin-left: 10px;
   font-family: 'Roboto' , sans-serif;
+  text-decoration: none;
 }
 
 .user-link2 {
@@ -50,13 +55,16 @@
   padding: 6px 16px;
   float: left;
   font-family: 'Roboto' , sans-serif;
+  text-decoration: none;
 }
 
 .nav-bar-2 {
   display: flex;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #f64c72
+  color: #f64c72;
+  text-decoration: none;
   
 }

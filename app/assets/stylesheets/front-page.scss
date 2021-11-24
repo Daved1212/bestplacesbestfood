@@ -1,0 +1,52 @@
+.home-page-quote {
+  text-align: center;
+  padding-top: 27px;
+  color: #FFFFFF;
+  font-size: 22px;
+  font-family: 'Archivo', sans-serif;
+  text-shadow: 1px 1px #ccc;
+}
+
+.food-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: flex;
+  list-style: none;
+  border-radius: 10px;
+  -moz-box-shadow:    1px 1px 2px 3px #ccc;
+  -webkit-box-shadow: 1px 1px 2px 3px #ccc;
+  box-shadow:         1px 1px 2px 3px #ccc;
+  transition: 1s ease;
+}
+
+.food-photo:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 1s ease;
+}
+
+.food-name {
+  text-align: center;
+  text-decoration: none;
+  padding-top: 5px;
+  font-family: 'Archivo', sans-serif;
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.food-tile {
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  margin: 15px auto;
+  margin-bottom: 10px; 
+  text-decoration: none;
+}
+
+body {
+  background-color:  #2f2fa2;
+}
