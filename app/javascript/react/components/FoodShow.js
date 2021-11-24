@@ -19,8 +19,7 @@ const FoodShow = (props) => {
         throw(error)
       }
       const foodInfo = await response.json()
-      setFood({...food, ...foodInfo.food})
-      debugger
+      setFood({...food, ...foodInfo})
     } catch(err) {
       console.error(`Error in fetch: ${err.message}`)
     }

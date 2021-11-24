@@ -5,18 +5,17 @@ const RestaurantShowContainer = (props) => {
   const [restaurantInfo, setRestaurantInfo] = useState([])
 
   const restaurantId = props.match.params.id
+  
   const fetchData = async () => {
     try {
-      const response = await fetch(`/api/v1/restaurants/${restaurantId}`)
-      debugger
+      const response = await fetch(`/api/v1/foods/food_id/restaurants/${restaurantId}`)
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         const error = new Error(errorMessage)
         throw error
       }
       const responseBody = await response.json()
-      setRestaurantInfo(responseBody.restaurant)
-      debugger
+      setRestaurantInfo(responseBody)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
