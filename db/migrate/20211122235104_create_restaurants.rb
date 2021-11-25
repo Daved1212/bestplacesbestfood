@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[6.1]
       t.string :location, null: false
       t.text :description, null: false
       t.string :photo_url, null: false
-
+      t.string :yelp_id, foreign_key: true
       t.belongs_to :food, null: false 
       t.timestamps
     end

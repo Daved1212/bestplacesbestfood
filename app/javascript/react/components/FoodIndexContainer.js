@@ -3,6 +3,7 @@ import FoodTile from "./FoodTile";
 
 const FoodIndexContainer = (props) => {
   const [foods, setFoods] = useState([])
+  
   const fetchData = async () => {
     try {
       const response = await fetch("/api/v1/foods")

@@ -16,4 +16,12 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  namespace :api do
+    namespace :v1 do
+      resources :restaurants, only:[:show] do
+        resources :reviews, only: [:create]
+      end
+    end
+  end
 end
