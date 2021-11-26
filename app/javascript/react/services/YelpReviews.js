@@ -2,7 +2,7 @@ class YelpReviews {
 
   static async getYelp() {
     try {
-      const response = await fetch("https://api.yelp.com/v3/businesses/{id}/reviews")
+      const response = await fetch("https://api.yelp.com/v3/businesses/yelp_id/reviews")
       if (!response.ok) {
         throw new Error(`${response.status} ${response.statusText}`)
       }

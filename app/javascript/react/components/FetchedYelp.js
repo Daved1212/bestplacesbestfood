@@ -23,6 +23,11 @@ const FetchedYelp = (props) => {
     })
 
     return (
-      {YelpReviewInfo}
+     <div>
+        {YelpReviewInfo}
+      </div>  
     )
 }
+
+
+export default FetchedYelp
