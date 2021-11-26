@@ -1,14 +1,14 @@
 class Api::V1::RestaurantsController < ApplicationController
   
   def show
-    base_url = "https://api.yelp.com/v3/businesses/yalp_id/reviews"
+    base_url = "https://api.yelp.com/v3/businesses/yelp_id/reviews"
     response = Faraday.get base_url do |request|
     request.headers["Authorization"] = "Bearer #{ENV["API_KEY"]}"
+    render json: Restaurant.find(params[:id])
     end
     parsed_response = JSON.parse(response.body)
-    # binding.pry
-    render json: Restaurant.find(params[:id])
     render json: parsed_response
+    binding.pry
   end
 # move PAI key to ENV file
 # create .env.exmaple
