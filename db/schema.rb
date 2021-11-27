@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_11_24_184552) do
     t.string "location", null: false
     t.text "description", null: false
     t.string "photo_url", null: false
-    t.string "yelp_id"
+    t.string "yelp_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
