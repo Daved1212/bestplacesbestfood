@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :restaurants, only:[:show] do
-        resources :user_reviews, only:[:create]
+        resources :reviews, only:[:create]
       end
     end
   end

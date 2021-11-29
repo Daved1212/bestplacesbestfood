@@ -28,14 +28,13 @@ ActiveRecord::Schema.define(version: 2021_11_28_144901) do
     t.string "location", null: false
     t.text "description", null: false
     t.string "photo_url", null: false
-    t.string "yelp_id", null: false
     t.bigint "food_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["food_id"], name: "index_restaurants_on_food_id"
   end
 
-  create_table "user_reviews", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
     t.text "body", null: false
     t.integer "rating", null: false
     t.datetime "created_at", precision: 6, null: false

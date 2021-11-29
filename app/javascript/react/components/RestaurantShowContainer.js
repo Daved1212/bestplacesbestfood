@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import RestaurantShow from "./RestaurantShow";
-import UserReviews from "./UserReviews";
+import Reviews from "./Reviews";
 
 const RestaurantShowContainer = (props) => {
   const [restaurantInfo, setRestaurantInfo] = useState([])
-  const [restaurantUserReview, setRestaurantUserReview] = useState("")
+  const [restaurantReview, setRestaurantReview] = useState("")
 
   const restaurantId = props.match.params.id
   
@@ -18,7 +18,7 @@ const RestaurantShowContainer = (props) => {
       }
       const responseBody = await response.json()
       setRestaurantInfo(responseBody)
-      setRestaurantUserReview(responseBody.restaurant.userReviews)
+      setRestaurantReview(responseBody.restaurant.reviews)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -34,10 +34,10 @@ const RestaurantShowContainer = (props) => {
         key={restaurantInfo.id}
         restaurantInfo={restaurantInfo}
       />  
-      <UserReviews
-        userReviews={restaurantUserReview}
+      <Reviews
+        reviews={restaurantReview}
         restaurantId={restaurantId}
-        setRestaurantUserReview={setRestaurantUserReview}
+        setRestaurantReview={setRestaurantReview}
       /> 
     </div>
   )

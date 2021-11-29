@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from "react";
-import UserReviewForm from "./UserReviewForm";
-import UserReviewItem from "./UserReviewItems";
+import ReviewForm from "./ReviewForm";
+import ReviewItem from "./ReviewItems";
 
-const UserReviews = (props) => {
+const Reviews = (props) => {
   const [errors, setErrors] =  useState("")
 
-  let userReviewSubmittedHandler = async (userForm) => {
-    let formPayLoad = userForm
+  let reviewSubmittedHandler = async (reviewForm) => {
+    let formPayLoad = reviewForm
     try {
       const response = await fetch(`/api/v1/restaurants/${props.restaurantId}/reviews`, {
         credentials: "same-origin",
@@ -26,8 +26,8 @@ const UserReviews = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-        let newUserReview = responseBody.userForm
-        props.setRestaurantUserReview([...props.userForm, newUserReview])
+        let userReview = responseBody.reviewForm
+        props.setRestaurantReview([...props.reviewForm, userReview])
         setErrors("")
       } catch (error) {
         if (error.message === "401 (Unauthorized)"){
@@ -40,12 +40,12 @@ const UserReviews = (props) => {
   return (
     <div>
       <h4 className="errors"> {errors}</h4>
-      <UserReviewForm onUserReviewSubmitted={userReviewSubmittedHandler} />
-      <UserReviewItem userForm={props.userForm} />
+      <ReviewForm onReviewSubmitted={reviewSubmittedHandler} />
+      <ReviewItem reviewForm={props.reviewForm} />
     </div>
   )
 
 
 }
 
-export default UserReviews
+export default Reviews

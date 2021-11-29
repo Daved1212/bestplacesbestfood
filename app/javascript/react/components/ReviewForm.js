@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
-const UserReviewForm = (props) => {
-  const{userForm, setUserForm} = useState({
+const ReviewForm = (props) => {
+  const{reviewForm, setReviewForm} = useState({
     body: "",
     rating: ""
   })
@@ -24,29 +24,29 @@ const UserReviewForm = (props) => {
   })
 
   const handleInputChange = event => {
-    setUserForm({
-      ...userForm,
+    setReviewForm({
+      ...reviewForm,
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
 
   const onSubmitHandler = event => {
     event.preventDefault()
-    props.onUserReviewSubmitted(userForm)
+    props.onUserReviewSubmitted(reviewForm)
     clearForm()
   }
 
   const clearForm = event => {
-    setUserForm({
+    setReviewForm({
       body: "",
       rating: ""
     })
   }
 
   return (
-    <form className="user-review-form" onSubmit={onSubmitHandler} >
+    <form className="review-form" onSubmit={onSubmitHandler} >
       <label> Review:
-        <textarea type="text" name="body" onChange={handleInputChange} value={userForm.body} />
+        <textarea type="text" name="body" onChange={handleInputChange} value={reviewForm.body} />
       </label>
       <label> Rating:
         className="rating" 
@@ -59,4 +59,4 @@ const UserReviewForm = (props) => {
   )
 }
 
-export default UserReviewForm
+export default ReviewForm

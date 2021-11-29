@@ -1,8 +1,8 @@
-class UserReviews < ApplicationRecord
+class Reviews < ApplicationRecord
   validates :body, presence: true
-  validates :rating,presence: true
+  validates :rating, presence: true
   validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
   
-  belongs_to :User
+  belongs_to :user
   belongs_to :restaurants
 end
