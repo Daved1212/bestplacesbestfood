@@ -3,6 +3,7 @@ import ReviewTile from "./ReviewTile";
 
 const ReviewItem = (props) => {
   
+  const {reviews} = props
 
   const reviewList = reviews.map(review => {
     return (
@@ -12,7 +13,7 @@ const ReviewItem = (props) => {
        lastName={review.user.last_name}
        timestamp={review.created_at}
        reviewBody={review.body}
-       rating={review.rating}
+       reviewRating={review.rating}
       /> 
     )
   })

@@ -5,10 +5,12 @@ import ReviewItem from "./ReviewItems";
 const Reviews = (props) => {
   const [errors, setErrors] =  useState("")
 
-  let reviewSubmittedHandler = async (reviewForm) => {
-    let formPayLoad = reviewForm
+  let reviewsSubmittedHandler = async (review) => {
+    
+    let formPayLoad = review
+    
     try {
-      const response = await fetch(`/api/v1/restaurants/${props.restaurantId}/reviews`, {
+      const response = await fetch(`/api/v1/restaurants/${restaurantId}/reviews`, {
         credentials: "same-origin",
         method: "POST",
         headers: {
@@ -26,8 +28,8 @@ const Reviews = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-        let userReview = responseBody.reviewForm
-        props.setRestaurantReview([...props.reviewForm, userReview])
+        let newReview = responseBody.review
+        props.setRestaurantReview([...props.reviews, newReview])
         setErrors("")
       } catch (error) {
         if (error.message === "401 (Unauthorized)"){
@@ -40,8 +42,8 @@ const Reviews = (props) => {
   return (
     <div>
       <h4 className="errors"> {errors}</h4>
-      <ReviewForm onReviewSubmitted={reviewSubmittedHandler} />
-      <ReviewItem reviewForm={props.reviewForm} />
+      <ReviewForm onReviewsSubmitted={reviewsSubmittedHandler} />
+      <ReviewItem reviews={props.reviews} />
     </div>
   )
 

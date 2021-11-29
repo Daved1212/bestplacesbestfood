@@ -10,13 +10,13 @@ class Api::V1::Reviews < ApplicationController
   if Review.save
     render json: Review
   else
-    render json: {error: userReview.errors.full_messages.to_sentance }, status: :unprocessable_entity
+    render json: {error: review.errors.full_messages.to_sentance }, status: :unprocessable_entity
   end
 end
 
   private
 
   def reviews_params
-    params.require(:Review).permit(:body, :rating)
+    params.require(:review).permit(:body, :rating)
   end
 end

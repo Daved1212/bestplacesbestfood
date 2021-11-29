@@ -1,9 +1,7 @@
 import React from "react";
 
 const ReviewTile = (props) => {
-  const {firstName,lastName, timestamp, reviewBody, reviewRating} = props
-  
-  const starRating = `${"★".repeat(review.rating)}${"☆".repeat(5-review.rating)}`
+  const {firstName,lastName, timestamp, reviewBody} = props
   
   const time = new Date(timestamp)
 
@@ -20,12 +18,6 @@ const ReviewTile = (props) => {
       </div>
       <div className="name" >
         {`${firstName}, ${lastName}`} 
-      </div>
-      <div className="rating" >
-        {reviewRating}
-      </div>
-      <div className="star-rating" >
-        {starRating}
       </div>
       <div className="review-body" >
         {reviewBody}

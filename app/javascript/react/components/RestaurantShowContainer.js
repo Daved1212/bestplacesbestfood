@@ -4,7 +4,7 @@ import Reviews from "./Reviews";
 
 const RestaurantShowContainer = (props) => {
   const [restaurantInfo, setRestaurantInfo] = useState([])
-  const [restaurantReview, setRestaurantReview] = useState("")
+  const [restaurantReview, setRestaurantReview] = useState([])
 
   const restaurantId = props.match.params.id
   
