@@ -1,22 +1,21 @@
-class Api::V1::Reviews < ApplicationController
+class Api::V1::ReviewsController < ApplicationController
   before_action :authenticate_user!, only: [:create]
-  
-  def create
-    Review = Review.new(review_params)
-    Review.user = current_user
-    Review.restaurant_id = params[:restaurant_id]
-  end
 
-  if Review.save
-    render json: Review
-  else
-    render json: {error: review.errors.full_messages.to_sentance }, status: :unprocessable_entity
+  def create
+    review = Review.new(review_params)
+    review.user = current_user
+    review.restaurant_id = params[:restaurant_id]
+    
+    if review.save
+      render json: review
+    else
+      render json: { error: review.errors.full_messages.to_sentence }, status: :unprocessable_entity
+    end
   end
-end
 
   private
 
-  def reviews_params
-    params.require(:review).permit(:body, :rating)
+  def review_params
+    params.require(:review).permit(:body)
   end
 end

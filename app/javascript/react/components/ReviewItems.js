@@ -3,12 +3,10 @@ import ReviewTile from "./ReviewTile";
 
 const ReviewItem = (props) => {
   
-  const {reviews} = props
-
-  const reviewList = reviews.map(review => {
+  const reviewList = props.reviews.map(review => {
     return (
       <ReviewTile
-       key={restaurant.id}
+       key={review.id}
        firstName={review.user.first_name}
        lastName={review.user.last_name}
        timestamp={review.created_at}

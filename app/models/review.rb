@@ -1,8 +1,8 @@
-class Reviews < ApplicationRecord
+class Review < ApplicationRecord
   validates :body, presence: true
-  validates :rating, presence: true
-  validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
+  # validates :rating, presence: true
+  # validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }
   
   belongs_to :user
-  belongs_to :restaurants
+  belongs_to :restaurant
 end
