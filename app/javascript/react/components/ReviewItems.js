@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import ReviewTile from "./ReviewTile";
 
 const ReviewItem = (props) => {
-  
-  const reviewList = props.reviews.map(review => {
+
+  const reviewList = props.reviews?.map(review => {
     return (
       <ReviewTile
        key={review.id}
-       firstName={review.user.first_name}
-       lastName={review.user.last_name}
+       firstName={review.first_name}
+       lastName={review.last_name}
        timestamp={review.created_at}
        reviewBody={review.body}
        reviewRating={review.rating}
