@@ -2,7 +2,7 @@ class Api::V1::RestaurantsController < ApplicationController
   
   def show
     render json: Restaurant.find(params[:id])
-    # base_url = "https://api.yelp.com/v3/businesses/yelp_id/reviews"
+    # base_url = "https://api.yelp.com/v3/businesses/.yelp_id/reviews"
     # response = Faraday.get base_url do |request|
     # request.headers["Authorization"] = "Bearer #{ENV["API_KEY"]}"
     # end
