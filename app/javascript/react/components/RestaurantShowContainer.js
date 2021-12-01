@@ -5,6 +5,7 @@ import Reviews from "./Reviews";
 const RestaurantShowContainer = (props) => {
   const [restaurantInfo, setRestaurantInfo] = useState([])
   const [restaurantReviews, setRestaurantReviews] = useState([])
+  const [yelpReviews, setYelpReviews] = useState([])
   const [errors, setErrors] = useState("")
 
   const restaurantId = props.match.params.id
@@ -18,8 +19,11 @@ const RestaurantShowContainer = (props) => {
         throw error
       }
       const responseBody = await response.json()
+      const yelpInfo = responseBody.yelpData
+      debugger
       setRestaurantInfo(responseBody)
       setRestaurantReviews(responseBody.reviews)
+      setYelpReviews([...yelpReviews, yelpInfo])
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -72,6 +76,7 @@ const RestaurantShowContainer = (props) => {
         reviews={restaurantReviews}
         restaurantId={restaurantId}
         reviewSubmittedHandler={reviewSubmittedHandler}
+        yelpReviews={yelpReviews}
       /> 
     </div>
   )

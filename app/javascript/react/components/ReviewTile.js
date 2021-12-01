@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReviewTile = (props) => {
-  const {firstName,lastName, timestamp, reviewBody} = props
+  const {firstName, lastName, timestamp, reviewBody,name} = props
   
   const time = new Date(timestamp)
 
@@ -12,6 +12,7 @@ const ReviewTile = (props) => {
   const timeOfDay = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
 
   return (
+    <div>
     <div className="review-tile" >
       <div className="timestamp" >
         {`${month} ${day}, ${year}, ${timeOfDay}`}
@@ -22,6 +23,12 @@ const ReviewTile = (props) => {
       <div className="review-body" >
         {reviewBody}
       </div>
+    </div>
+    <div className="yelp-review-tile">
+      <div>
+        {`${name}`}
+      </div>
+    </div>
     </div>
   )
 }
