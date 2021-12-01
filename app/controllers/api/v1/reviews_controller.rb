@@ -8,7 +8,6 @@ class Api::V1::ReviewsController < ApplicationController
 
     if review.save
       render json: { review: ReviewSerializer.new(review) }
-      # render json: { review: review }
     else
       render json: { error: review.errors.full_messages.to_sentence }, status: :unprocessable_entity
     end

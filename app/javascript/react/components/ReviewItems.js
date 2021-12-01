@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import ReviewTile from "./ReviewTile";
+import YelpTile from "./YelpTile";
 
 const ReviewItem = (props) => {
 
+  
+
   const reviewList = props.reviews?.map(review => {
-    debugger
     return (
       <ReviewTile
        key={review.id}
@@ -16,17 +18,19 @@ const ReviewItem = (props) => {
       /> 
     )   
   })
-const yelpList = props.yelpReviews?.map(yelpReview => {
+
+  const yelpList = props.yelpReviews.map(yelpReview => {
   return (
-    <ReviewTile
+    <YelpTile
       key={yelpReview.id}
-      name={yelpReview.name}
+      yelpReview={yelpReview.reviews}
     />
   )
 })
   return (
     <div className="review-items" >
       {reviewList}
+      {yelpList}
     </div>
   )
 }

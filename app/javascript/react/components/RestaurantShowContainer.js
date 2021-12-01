@@ -20,7 +20,6 @@ const RestaurantShowContainer = (props) => {
       }
       const responseBody = await response.json()
       const yelpInfo = responseBody.yelpData
-      debugger
       setRestaurantInfo(responseBody)
       setRestaurantReviews(responseBody.reviews)
       setYelpReviews([...yelpReviews, yelpInfo])
