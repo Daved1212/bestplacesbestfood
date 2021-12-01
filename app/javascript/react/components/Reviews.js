@@ -3,6 +3,7 @@ import ReviewForm from './ReviewForm'
 import ReviewItem from './ReviewItems'
 
 const Reviews = (props) => {
+  // debugger
   return (
     <div>
       <ReviewForm onReviewSubmitted={props.reviewSubmittedHandler} />

@@ -5,7 +5,7 @@ import YelpTile from "./YelpTile";
 const ReviewItem = (props) => {
 
   
-
+  // debugger
   const reviewList = props.reviews?.map(review => {
     return (
       <ReviewTile
@@ -19,18 +19,20 @@ const ReviewItem = (props) => {
     )   
   })
 
+  // debugger
+
   const yelpList = props.yelpReviews.map(yelpReview => {
   return (
     <YelpTile
       key={yelpReview.id}
-      yelpReview={yelpReview.reviews}
+      yelpReview={yelpReview}
     />
   )
 })
   return (
     <div className="review-items" >
       {reviewList}
-      {yelpList}
+      {yelpList} 
     </div>
   )
 }

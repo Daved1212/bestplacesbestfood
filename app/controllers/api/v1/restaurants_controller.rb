@@ -7,6 +7,7 @@ class Api::V1::RestaurantsController < ApplicationController
     request.headers["Authorization"] = "Bearer #{ENV["API_KEY"]}"
     end
     parsed_response = JSON.parse(response.body)
-    render json: {restaurant: restaurant, yelpData: parsed_response}
+    # add a serializer here 
+    render json: {restaurant: RestaurantSerializer.new(restaurant), yelpData: parsed_response}
   end
 end

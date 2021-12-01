@@ -19,10 +19,11 @@ const RestaurantShowContainer = (props) => {
         throw error
       }
       const responseBody = await response.json()
+      // debugger
       const yelpInfo = responseBody.yelpData
-      setRestaurantInfo(responseBody)
-      setRestaurantReviews(responseBody.reviews)
-      setYelpReviews([...yelpReviews, yelpInfo])
+      setRestaurantInfo(responseBody.restaurant)
+      setRestaurantReviews(responseBody.restaurant.reviews)
+      setYelpReviews(yelpInfo.reviews)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -53,8 +54,11 @@ const RestaurantShowContainer = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
+      
       const newReview = responseBody.review
+      debugger
       setRestaurantReviews([...restaurantReviews, newReview])
+     
       setErrors("")   
     } catch (error) {
       if (error.message == "401 (Unauthorized)"){
