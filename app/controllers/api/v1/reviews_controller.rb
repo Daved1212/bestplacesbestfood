@@ -7,7 +7,7 @@ class Api::V1::ReviewsController < ApplicationController
     review.restaurant_id = params[:restaurant_id]
 
     if review.save
-      render json: { review: review }
+      render json: { review: ReviewSerializer.new(review) }
     else
       render json: { error: review.errors.full_messages.to_sentence }, status: :unprocessable_entity
     end

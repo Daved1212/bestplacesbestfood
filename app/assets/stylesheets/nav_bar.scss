@@ -12,7 +12,18 @@
   color: #212121;
   text-decoration: none;
 }
+ .menu-link {
+  text-decoration: none;
+  list-style: none;
+ }
 
+ .dropdown-menu ul li a{
+   text-decoration: none;
+ }
+
+ a:-webkit-any-link {
+   text-decoration: none;
+ }
 
 .nav-bar {
   display: flex;

@@ -48,4 +48,3 @@ const FoodShow = (props) => {
 }
 
 export default FoodShow
-
