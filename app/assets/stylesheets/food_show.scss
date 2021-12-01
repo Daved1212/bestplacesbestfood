@@ -1,0 +1,39 @@
+.food-name {
+  text-align: center;
+  color:#E53935 ;
+  font-size: 35px;
+  font-family: 'Archivo', sans-serif;
+  text-shadow: 1px 1px #000000;
+  font-weight: 800;
+}
+
+p.food-description {
+  text-align: center;
+  font-size: 19px;
+  font-family: 'Archivo', sans-serif;
+  color:#E53935 ;
+  text-shadow: 1px 1px 2px #ccc;
+  font-weight: 550;
+  text-shadow: 1px 1px #000000;
+}
+
+.restaurant-data-name {
+  color:#FFF59D  ;
+  text-align: center;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  text-shadow: 1px 1px #000000;
+}
+
+a:visited {
+  color: #FFEE58;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.restaurant-data-name:hover {
+  background-color:#f64c72 ;
+}

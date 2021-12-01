@@ -6,7 +6,7 @@ const FoodTile = (props) => {
     <div className="food-tile">
       <Link to={`/foods/${props.food.id}`}>
         <img className="food-photo" src={props.food.photo_url} />
-        <div className="food-name">
+        <div className="food-name-1">
           {props.food.name}
         </div>
       </Link>

@@ -1,7 +1,7 @@
 .home-page-quote {
   text-align: center;
   padding-top: 27px;
-  color: #FFFFFF;
+  color:#0D47A1   ;
   font-size: 22px;
   font-family: 'Archivo', sans-serif;
   text-shadow: 1px 1px #ccc;
@@ -20,21 +20,25 @@
   transition: 1s ease;
 }
 
-.food-photo:hover {
+.food-photo:hover, .food-name-1:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
   transition: 1s ease;
 }
 
-.food-name {
+.food-name-1 {
   text-align: center;
   text-decoration: none;
   padding-top: 5px;
   font-family: 'Archivo', sans-serif;
   font-size: 19px;
   text-decoration: none;
+  color: #FF5722 ;
+  font-weight: bold;
+  text-shadow: 1.25px 1.25px #000000;
 }
+
 
 .food-tile {
   max-width: 700px;
@@ -48,5 +52,6 @@
 }
 
 body {
-  background-color:  #2f2fa2;
+  background-image: url(https://icdn.caughtoffside.com/wp-content/uploads/2015/02/food-burgers.jpg);
+  background-size: cover;
 }
