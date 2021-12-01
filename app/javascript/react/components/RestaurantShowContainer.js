@@ -5,10 +5,11 @@ import Reviews from "./Reviews";
 const RestaurantShowContainer = (props) => {
   const [restaurantInfo, setRestaurantInfo] = useState([])
   const [restaurantReviews, setRestaurantReviews] = useState([])
+  const [yelpReviews, setYelpReviews] = useState([])
   const [errors, setErrors] = useState("")
 
   const restaurantId = props.match.params.id
-  
+
   const fetchData = async () => {
     try {
       const response = await fetch(`/api/v1/restaurants/${restaurantId}`)
@@ -18,8 +19,11 @@ const RestaurantShowContainer = (props) => {
         throw error
       }
       const responseBody = await response.json()
-      setRestaurantInfo(responseBody)
-      setRestaurantReviews(responseBody.reviews)
+      // debugger
+      const yelpInfo = responseBody.yelpData
+      setRestaurantInfo(responseBody.restaurant)
+      setRestaurantReviews(responseBody.restaurant.reviews)
+      setYelpReviews(yelpInfo.reviews)
     } catch (err) {
       console.error(`Error in fetch: ${err.message}`)
     }
@@ -50,8 +54,11 @@ const RestaurantShowContainer = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
+      
       const newReview = responseBody.review
+      debugger
       setRestaurantReviews([...restaurantReviews, newReview])
+     
       setErrors("")   
     } catch (error) {
       if (error.message == "401 (Unauthorized)"){
@@ -72,6 +79,7 @@ const RestaurantShowContainer = (props) => {
         reviews={restaurantReviews}
         restaurantId={restaurantId}
         reviewSubmittedHandler={reviewSubmittedHandler}
+        yelpReviews={yelpReviews}
       /> 
     </div>
   )

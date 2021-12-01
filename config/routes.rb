@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/foods/:id', to: 'homes#index'
   get '/restaurants', to: 'homes#index'
   get '/restaurants/:id', to: 'homes#index'
+ 
 
 
   namespace :api do
