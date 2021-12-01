@@ -3,19 +3,18 @@
   text-decoration: none;
   list-style: none;
   margin: auto;
-  color: #f64c72;
+  color: #212121;
   float: left;
   padding-right: 25px;
 }
 
 .links a {
-  color: #f64c72;
+  color: #212121;
   text-decoration: none;
 }
 
 
 .nav-bar {
-  background-color: #2F2FA2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,13 +27,13 @@
   flex-direction: column;
   margin-left: 25px;
   font-size: 1.3em;
-  color: #f64c72;
+  color: #212121;
   font-family: 'Roboto' , sans-serif;
   text-decoration: none;
 }
 
 .nav-bar-1 a {
-  color: #f64c72;
+  color: #212121;
   text-decoration: none;
 }
 
@@ -56,15 +55,23 @@
   float: left;
   font-family: 'Roboto' , sans-serif;
   text-decoration: none;
+  -left: 10px;
 }
 
 .nav-bar-2 {
   display: flex;
   text-decoration: none;
+  margin-left: 10px;
 }
 
 a:visited {
-  color: #f64c72;
+  color: #0D47A1 ;
   text-decoration: none;
-  
 }
+
+li.menu-link {
+  list-style: none;
+  padding-left: 10px;
+}
+
+
