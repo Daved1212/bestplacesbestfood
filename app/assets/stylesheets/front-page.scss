@@ -20,7 +20,7 @@
   transition: 1s ease;
 }
 
-.food-photo:hover {
+.food-photo:hover, .food-name-1:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
@@ -34,7 +34,11 @@
   font-family: 'Archivo', sans-serif;
   font-size: 19px;
   text-decoration: none;
+  color: #FF5722 ;
+  font-weight: bold;
+  text-shadow: 1.25px 1.25px #000000;
 }
+
 
 .food-tile {
   max-width: 700px;
@@ -48,5 +52,6 @@
 }
 
 body {
-  background-image: url(https://i2-prod.walesonline.co.uk/incoming/article11671681.ece/ALTERNATES/s810/food-Collage.jpg);
+  background-image: url(https://icdn.caughtoffside.com/wp-content/uploads/2015/02/food-burgers.jpg);
+  background-size: cover;
 }

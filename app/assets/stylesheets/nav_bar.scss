@@ -3,26 +3,18 @@
   text-decoration: none;
   list-style: none;
   margin: auto;
-  color: #212121;
   float: left;
   padding-right: 25px;
 }
 
-.links a {
-  color: #212121;
-  text-decoration: none;
-}
  .menu-link {
   text-decoration: none;
   list-style: none;
  }
 
- .dropdown-menu ul li a{
+a:-webkit-any-link {
    text-decoration: none;
- }
-
- a:-webkit-any-link {
-   text-decoration: none;
+   font-weight: bold;
  }
 
 .nav-bar {
@@ -30,6 +22,7 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .nav-bar-1 {
@@ -38,51 +31,17 @@
   flex-direction: column;
   margin-left: 25px;
   font-size: 1.3em;
-  color: #212121;
-  font-family: 'Roboto' , sans-serif;
+  font-family: 'Archivo', sans-serif;
   text-decoration: none;
 }
 
-.nav-bar-1 a {
-  color: #212121;
-  text-decoration: none;
-}
-
-.user-link1 {
-  border-right: solid;
-  display: flex;
-  margin: auto;
-  padding: 6px 16px;
-  float: left;
-  margin-left: 10px;
-  font-family: 'Roboto' , sans-serif;
-  text-decoration: none;
-}
-
-.user-link2 {
-  display: flex;
-  margin: auto;
-  padding: 6px 16px;
-  float: left;
-  font-family: 'Roboto' , sans-serif;
-  text-decoration: none;
-  -left: 10px;
-}
-
-.nav-bar-2 {
-  display: flex;
-  text-decoration: none;
-  margin-left: 10px;
+a {
+  font-weight: bold;
 }
 
 a:visited {
   color: #0D47A1 ;
   text-decoration: none;
+  font-weight: bold;
 }
-
-li.menu-link {
-  list-style: none;
-  padding-left: 10px;
-}
-
 
