@@ -33,6 +33,7 @@ const ReviewItem = (props) => {
     <div className="review-items" >
       {reviewList}
       {yelpList} 
+      <h3 className="yelp-text">YELP REVIEWS <img src= "https://emojis.slackmojis.com/emojis/images/1470349913/723/yelp.png?1470349913"/></h3>
     </div>
   )
 }

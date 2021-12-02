@@ -1,0 +1,116 @@
+img.restaurant-photo {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width: 275px;
+  height: 275px;
+  border: 2px solid;
+  border-color: #E53935;
+  opacity: 0.8;
+  object-fit: cover;
+}
+
+.restaurant-name {
+  text-align: center;
+  font-family: 'Archivo', sans-serif;
+  color:#E53935 ;
+  opacity: 0.8;
+}
+
+
+p.restaurant-description, p.restaurant-location{
+  text-align: center;
+  color: #0D47A1  ;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.review-form {
+  display: inline-block;
+  margin-left: 33%;
+  margin-right:33;
+  width: 800px;
+  height: 40px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  border: 2px solid;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px;
+}
+
+input{
+  background-color: #FFFFFF;
+  color:#E53935 ;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1em;
+ 
+  
+}
+
+label {
+  color:#E53935;
+  font-family: 'Archivo', sans-serif;
+  font-weight: inherit;
+}
+ .restaurant-details {
+   background-color: #FFFFFF ;
+   padding: 0.8em 0.8em 0.8em 0.8em;
+   display:inline-block;
+   border-radius: 20px;
+   text-align:center;
+   margin-left: 33%;
+   margin-right: 33%;
+   margin-bottom: 15px;
+   margin-top: 15px;
+ }
+
+ h5.errors {
+   text-align: center;
+   font-family: 'Archivo', sans-serif;
+   color: #C0392B  ;
+   font-size: 3em;
+}
+
+.review-items {
+  text-align: center;
+  margin-top: 25px;
+  opacity: 0.8;
+}
+
+.review-tile {
+background-color: #FFFFFF;
+display: table;
+padding: 0.5em 0.2em 0.8em 0.5em;
+margin: 30px auto;
+border-radius: 20px;
+}
+
+.yelp-reviews {
+  border-style: solid;
+  max-width: 25%;
+  max-height: 25%;
+  background-color: #58D68D;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  top: 140px;
+  left: 25px;
+  opacity: 0.7;
+}
+
+.yelp-text {
+  font-family: 'Archivo', sans-serif;
+  font-weight: inherit;
+  font-size: 1.5em;
+  position: absolute;
+  top: 70px;
+  left: 35px;
+}
