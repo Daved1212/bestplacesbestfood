@@ -1,6 +1,7 @@
 import React from "react";
 
 const RestaurantShow = (props) => {
+
   return(
     
     <div className="restaurant-details">
