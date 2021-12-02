@@ -1,3 +1,4 @@
-const { environment } = require('@rails/webpacker')
 
-module.exports = environment
+import { environment } from '@rails/webpacker'
+
+export default environment
