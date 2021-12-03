@@ -1,15 +1,13 @@
-import React, {useState } from 'react'
+import React from 'react'
 import ReviewForm from './ReviewForm'
 import ReviewItem from './ReviewItems'
 
 const Reviews = (props) => {
-  // debugger
+  
   return (
     <div>
       <ReviewForm onReviewSubmitted={props.reviewSubmittedHandler} />
-      <ReviewItem reviews={props.reviews}
-                  yelpReviews={props.yelpReviews} 
-      />
+      <ReviewItem reviews={props.reviews}/>
     </div>
   )
 }
