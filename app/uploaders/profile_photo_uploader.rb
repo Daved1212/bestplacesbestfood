@@ -1,5 +1,5 @@
 class ProfilePhotoUploader < CarrierWave::Uploader::Base
-  
+
   if Rails.env.test?
     storage :file
   else
