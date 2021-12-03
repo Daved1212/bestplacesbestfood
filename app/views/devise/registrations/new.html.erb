@@ -31,12 +31,11 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-<form_fo action="/upload" method="post"r>
-  <div class="profile-pic">
-  <%= f.label :profile_photo %>
-  <%= f.file_field :profile_photo %>
-  </form>
-  </div>
+
+  <div class="field profile-picture">
+    <%= f.label :profile_picture %>
+    <%= f.file_field :profile_picture %>
+ </div>  
 
   <div class="actions">
     <%= f.submit "Sign up" %>

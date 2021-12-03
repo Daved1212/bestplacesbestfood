@@ -1,9 +1,6 @@
 class ProfilePhotoUploader < CarrierWave::Uploader::Base
-  include CarrierWave::MiniMagick
   
-  storage :file
-
-if Rails.env.test?
+  if Rails.env.test?
     storage :file
   else
     storage :fog
@@ -13,7 +10,7 @@ if Rails.env.test?
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
   
-  def default_url(*args)
-   "https://good-places-good-food-production.s3.amazonaws.com/User+default+picture/download.jpg" 
+  def default_url
+    ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
   end
 end
