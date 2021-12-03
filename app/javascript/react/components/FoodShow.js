@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RestaurantBlock from "./RestaurantBlock";
 
-
 const FoodShow = (props) => {
   const [food, setFood] = useState({
     id: "",

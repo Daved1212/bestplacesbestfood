@@ -10,16 +10,15 @@ const ReviewTile = (props) => {
 
   const timeOfDay = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })
   return (
-    
     <div className="review-tile" >
-      <div className="timestamp" >
-        {`${month} ${day}, ${year}, ${timeOfDay}`}
-      </div>
       <div className="name" >
         {`${firstName}, ${lastName}`} 
       </div>
       <div className="review-body" >
         {reviewBody}
+      <div className="timestamp" >
+        {`${month} ${day}, ${year}, ${timeOfDay}`}
+      </div>
       </div>
     </div>
     

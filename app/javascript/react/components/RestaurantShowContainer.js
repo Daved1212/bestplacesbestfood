@@ -19,7 +19,6 @@ const RestaurantShowContainer = (props) => {
         throw error
       }
       const responseBody = await response.json()
-      // debugger
       const yelpInfo = responseBody.yelpData
       setRestaurantInfo(responseBody.restaurant)
       setRestaurantReviews(responseBody.restaurant.reviews)
@@ -54,11 +53,8 @@ const RestaurantShowContainer = (props) => {
         throw new Error(errorMessage)
       }
       const responseBody = await response.json()
-      
       const newReview = responseBody.review
-      debugger
-      setRestaurantReviews([...restaurantReviews, newReview])
-     
+      setRestaurantReviews([...restaurantReviews, newReview]) 
       setErrors("")   
     } catch (error) {
       if (error.message == "401 (Unauthorized)"){
@@ -74,12 +70,13 @@ const RestaurantShowContainer = (props) => {
       <RestaurantShow
         key={restaurantInfo}
         restaurantInfo={restaurantInfo}
-      />  
+        yelpReviews={yelpReviews}
+        />  
       <Reviews
         reviews={restaurantReviews}
         restaurantId={restaurantId}
         reviewSubmittedHandler={reviewSubmittedHandler}
-        yelpReviews={yelpReviews}
+        
       /> 
     </div>
   )
