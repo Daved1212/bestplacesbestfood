@@ -11,6 +11,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
+gem 'fog'
+gem 'carrierwave'
+gem 'carrierwave-aws'
+gem "fog-aws"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
