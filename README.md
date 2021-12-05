@@ -1,5 +1,5 @@
 
-                          <h1> **BESTPLACESBESTFOODS** </h1>
+                          <h1> BESTPLACESBESTFOODS </h1>
 
 <p>Make a user account to view some tasty looking pub food's top restaurants in my local area. You can leave a review for any given restaurant if you wish you leave your feed back. You can also see some yelp reviews for each restaurant on their given page. Built with Ruby on Rails, BESTPLACESBESTFOOD is a feature filled and easy to explore and use. </p>
 
