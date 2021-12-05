@@ -19,7 +19,7 @@ const RestaurantShow = (props) => {
     return(
       <div>
       <h4 className="yelp">Yelp Reviews<img src= "https://emojis.slackmojis.com/emojis/images/1470349913/723/yelp.png?1470349913"/></h4>
-      <div>  
+      <div className="yelp-list">  
         {yelpList}
       </div>  
       <div className="restaurant-details">
