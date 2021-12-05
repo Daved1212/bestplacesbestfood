@@ -6,9 +6,13 @@ img.restaurant-photo {
   width: 275px;
   height: 275px;
   border: 2px solid;
-  border-color: #E53935;
+  border-color: #FFFFFF;
+  border-style: ridge;
   opacity: 0.8;
   object-fit: inherit;
+  box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
+  -moz-box-shadow: 0 1px 2px rgba(34,25,25,0.4);
+  -webkit-box-shadow: 0 1px 3px rgba(34, 25, 25, 0.4);
 }
 
 .restaurant-name {
@@ -23,7 +27,6 @@ p.restaurant-description, p.restaurant-location{
   text-align: center;
   color: #0D47A1  ;
   font-family: 'Archivo', sans-serif;
-  font-weight: bold;
   opacity: 0.8;
 }
 
@@ -34,6 +37,8 @@ p.restaurant-description, p.restaurant-location{
   width: 800px;
   height: 40px;
   outline: none;
+  top: 550px;
+  position: absolute;
 }
 
 textarea {
@@ -44,7 +49,7 @@ textarea {
   border-radius: 4px;
   box-shadow: 0 0 0 1px;
   align-items: center;
-  top: 50%
+  top: 15%
 }
 
 .review-label {
@@ -62,6 +67,8 @@ textarea {
    margin-right: 33%;
    margin-bottom: 15px;
    margin-top: 15px;
+   top: 40px; 
+   position: absolute;
  }
 
  h5.errors {
@@ -84,26 +91,35 @@ padding: 0.5em 0.2em 0.8em 0.5em;
 margin: auto;
 }
 
-.yelp-review-info,li {
-  
-  border-radius: 20px;
-  text-align: center;
-  max-width: 250px ;
-  max-height: 250px;
-  list-style: none; 
-  margin: 15px;
-  display: inline-flex;
-  left: 225px;
+.yelp-review-info {
+  margin-bottom: 2em;
  }
 
 
 .yelp{
 font-size: 2em;
 color: #E74C3C ;
-text-align: center;
+float: left;
+top: 220px;
+position: absolute;
+left: 105px;
+top: 45px;
 }
 
-.yelp-li {
-  position: relative;
-  background-color: #58D68D;
+.yelp-ol {
+width:  30em;
+list-style: none;
+}
+.yelp-li,.yelp-li {
+  background-color: #E74C3C ;
+  float: left;
+  width: 20em;
+  display: block;
+  border: 2px solid;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px;
+}
+
+.yelp-br {
+  clear: left;
 }
