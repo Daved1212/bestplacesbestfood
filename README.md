@@ -15,22 +15,20 @@
 <h3> To Run</h3>
 <p>
 To run on your local machine 
+
 ```
 rails s 
-
 ```
 
 in the command line
 
 ```
 yarn install and bundle install
-
 ```
  In another tab also run 
  
- ```
- yarn run dev:client.</p>
-
+```
+yarn run dev:client.</p>
 ```
 
 <p>Current version- https://thebestplacesthebestfoods.herokuapp.com/ </p>
