@@ -1,17 +1,20 @@
-# How to Use Me
 
-Assuming you are starting an app that you wish to call `rescue-mission` 
+                          <h1> **BESTPLACESBESTFOODS** </h1>
 
-In your terminal:
+<p>Make a user account to view some tasty looking pub food's top restaurants in my local area. You can leave a review for any given restaurant if you wish you leave your feed back. You can also see some yelp reviews for each restaurant on their given page. Built with Ruby on Rails, BESTPLACESBESTFOOD is a feature filled and easy to explore and use. </p>
 
-```
-git clone https://github.com/LaunchAcademy/rails-6-boilerplate
-cd rails-6-boilerplate 
-bundle
-yarn install
-```
+                           
+<h3>**Features**</h3>
+<ul>
+<li>Make a user account</li>
+<li>Download a profile picture</li>
+<li>Leave a review for a restaurant</li>
+<li>View yelp reviews for the restaurants</li>
+<li>See your user profile and a list of reviews that they have left</li>
+</ul>
 
-If you prefer, **you can rename your project with the `mv` command.**
+<h3> To Run</h3>
+<p>To run on your local machine rails s in the command line run yarn install and bundle install. In another tab also run yarn run dev:client.</p>
 
-Starting from the directory above your app (likely challenges):
-mv <source_directory> <target_directory>
+
+<p>Current version- https://thebestplacesthebestfoods.herokuapp.com/ </p>
