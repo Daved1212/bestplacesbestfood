@@ -16,7 +16,7 @@
     <h1 class="nav-bar-1"><%= link_to '🍴 The Best Foods 🍴' , root_path %></h1>
     <div class="nav-bar-2">
       <% if signed_in? %>
-        <ul class="dropdown menu" data-dropdown-menu>
+        <ul class="dropdown-menu" data-dropdown-menu>
           <li class="menu-link"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <li class="avatar"><%= link_to image_tag(current_user.profile_photo.url, width: 30, height: 30), user_path(current_user.id)%></li>
         </ul>
