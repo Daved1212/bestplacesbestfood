@@ -47,18 +47,7 @@ textarea {
   top: 50%
 }
 
-input{
-  background-color: #FFFFFF;
-  color:#E53935 ;
-  margin-bottom: 15px;
-  margin-top: 10px;
-  text-align: center;
-  font-size: 1em;
- 
-  
-}
-
-label {
+.review-label {
   color:#E53935;
   font-family: 'Archivo', sans-serif;
   font-weight: inherit;
@@ -89,26 +78,32 @@ label {
 }
 
 .review-tile {
-  color: #FFFFFF;
+  color: #000000;
 display: flexbox;
 padding: 0.5em 0.2em 0.8em 0.5em;
 margin: auto;
 }
 
-.yelp-review-info {
-  border-style: solid;
-  background-color: #58D68D;
+.yelp-review-info,li {
+  
   border-radius: 20px;
   text-align: center;
-  opacity: 0.7;
-  max-width: 250px auto;
+  max-width: 250px ;
   max-height: 250px;
   list-style: none; 
-  margin: 15px auto;
-}
+  margin: 15px;
+  display: inline-flex;
+  left: 225px;
+ }
+
 
 .yelp{
 font-size: 2em;
 color: #E74C3C ;
 text-align: center;
+}
+
+.yelp-li {
+  position: relative;
+  background-color: #58D68D;
 }

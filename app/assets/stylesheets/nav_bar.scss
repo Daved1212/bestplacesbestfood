@@ -1,10 +1,11 @@
-.links {
-  text-align: right;
-  text-decoration: none;
-  list-style: none;
-  margin: auto;
-  float: left;
-  padding-right: 25px;
+ul.links {
+  text-align: right !important;
+  text-decoration: none !important;
+  list-style: none !important;
+  margin: auto !important;
+  float: left !important;
+  padding-right: 25px !important;
+  background-color:  none !important;
 }
 
  .menu-link {
@@ -44,4 +45,3 @@ a:visited {
   text-decoration: none;
   font-weight: bold;
 }
-

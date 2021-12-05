@@ -5,7 +5,7 @@ const RestaurantShow = (props) => {
   const yelpList = props.yelpReviews?.map(yelpReview => {
     return(
       <div className="yelp-review-info">
-        <li>
+        <li className="yelp-li">
           {yelpReview.user.name}<br />
           {yelpReview.text}<br />
           {yelpReview.rating} <br />
