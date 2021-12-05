@@ -30,7 +30,7 @@ const ReviewForm = (props) => {
   return (
     <form onSubmit={onSubmitHandler} >
       <div className="review-form">
-        <label htmlFor="review"> Write review here:</label> <br />
+        <label className="review-label" htmlFor="review"> Write review here:</label> <br />
         <textarea cols="60" rows="5" type="text" name="body" onChange={handleInputChange} value={review.body} /> <br />
         <input type="submit" value="Submit" />
       </div>

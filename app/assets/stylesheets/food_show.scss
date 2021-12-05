@@ -18,7 +18,7 @@ p.food-description {
 }
 
 .restaurant-data-name {
-  color:#FFF59D  ;
+  color: #388E3C   ;
   text-align: center;
   font-family: 'Archivo', sans-serif;
   font-weight: bold;
@@ -26,7 +26,7 @@ p.food-description {
 }
 
 a:visited {
-  color: #FFEE58;
+  color: #388E3C  ;
   text-decoration: none;
 }
 
@@ -36,5 +36,7 @@ a {
 
 .restaurant-data-name:hover {
   background-color:#f64c72 ;
+  margin-left: 350px;
+  margin-right: 350px;
 }
 

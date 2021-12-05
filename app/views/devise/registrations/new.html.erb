@@ -1,4 +1,4 @@
-<div class="sign-up-log-in container">
+<div class="sign-up-log-in-container">
 <h2 class="user-path">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -32,9 +32,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <div class="field profile-picture">
+  <div class="field-profile-picture">
   <%= f.label :profile_picture %>
-  <%= f.file_field :avatar %>
+  <%= f.file_field :profile_picture %>
   </div>  
 
   <div class="actions">

@@ -1,13 +1,11 @@
 <div class="user-profile-picture"><%= image_tag("#{@user.profile_photo}", width:150, height: 150)%></div>
 <div class="user-first-name"> <%= @user.first_name%> </div>
 <div class="user-last-name"> <%= @user.last_name%> </div>
-<div class"user-profile-edit"> <%= link_to "Edit Account Information", edit_user_registration_path %></div>
-
+<div class="user-profile-edit"> <%= link_to "Edit Account Information", edit_user_registration_path %></div>
+<div class="user-review-text"><%= "Your Reviews:" %></div>
 <% @reviews.each do |review| %>
-  <div class="user-show-reviews>    
-    <li>
-      <%= review.body %>
-      <%= review.created_at %>
-    </li>
+  <div class= "user-show-reviews">    
+    <p class= "user-reviews"> <%= review.body %> <br />
+    <%= review.created_at %> </p>
 <% end %>
   </div>

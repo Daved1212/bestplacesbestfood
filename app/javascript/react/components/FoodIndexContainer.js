@@ -27,10 +27,15 @@ const FoodIndexContainer = (props) => {
   })
 
   return (
-    <div>
-      <div className="home-page-quote">
-        "People who love to eat are always the best people."
-      </div>
+    <div className="food-page">
+      <div>
+        <div className="page-name">
+          The Best Places For The Best Food
+        </div>
+        <div className="home-page-quote">
+          "People who love to eat are always the best people."
+        </div>
+        </div>
         <div className="food-tile">
           {foodInfo}
         </div>

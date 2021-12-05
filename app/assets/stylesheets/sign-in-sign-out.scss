@@ -1,0 +1,37 @@
+.sign-up-log-in-container {
+  width: 500px;
+  margin: 70px auto 40px;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px 0 rgba(63, 63, 55, .10);
+  background-color: #D5F5E3;
+  text-align: center;
+}
+
+.field label {
+  font-size: 1em;
+}
+
+h2.user-path {
+  color: #0D47A1
+}
+
+.flash-alert {
+  text-align: center;
+  color: red;
+  font-size: 1.5em;
+}
+
+.sign-in-error {
+  color: red;
+}
+
+.h2-error{
+  color: red;
+}
+
+.field-profile-picture {
+  left: 34px;
+  position: relative;
+}

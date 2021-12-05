@@ -11,7 +11,7 @@
   
 </head>
   
-  
+  <div class="backgoun-picture">
   <div class="nav-bar">
     <h1 class="nav-bar-1"><%= link_to '🍴 The Best Foods 🍴' , root_path %></h1>
     <div class="nav-bar-2">
@@ -22,13 +22,13 @@
         </ul>
       <% else %>
         <ul class="links">
-          <li class="user-link1"><%= link_to "Sign In", new_user_session_path %></li>
-          <li class="user-link2"><%= link_to "Sign Up", new_user_registration_path %></li>
+         <li class= "top-right-link"> <%= link_to "Sign In", new_user_session_path %></li>
+         <li class="top-right-link"> <%= link_to "Sign Up", new_user_registration_path %></li>
         </ul>
       <% end %>
     </div>
   </div>
-
+  </div>
 <body>
 
   <%- flash.each do |key, value| -%>
