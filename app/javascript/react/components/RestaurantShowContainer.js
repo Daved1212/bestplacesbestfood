@@ -75,8 +75,7 @@ const RestaurantShowContainer = (props) => {
       <Reviews
         reviews={restaurantReviews}
         restaurantId={restaurantId}
-        reviewSubmittedHandler={reviewSubmittedHandler}
-        
+        reviewSubmittedHandler={reviewSubmittedHandler}    
       /> 
     </div>
   )

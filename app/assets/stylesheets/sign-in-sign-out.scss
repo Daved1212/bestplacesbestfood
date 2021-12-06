@@ -40,7 +40,11 @@ h2.user-path {
   list-style: none;
 }
 
-
-.actions {
-  text-align: center;
+.actions input {
+  background-color: #0D47A1;
+  border: 1px solid #0D47A1;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 8px 14px;
+  margin-top: 10px;
 }
