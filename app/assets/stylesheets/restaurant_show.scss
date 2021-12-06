@@ -31,33 +31,11 @@ p.restaurant-description, p.restaurant-location{
 }
 
 .review-form {
-  display: inline-block;
-  margin-left: 33%;
-  margin: right 33%;;
-  width: 800px;
-  height: 20px;
-  outline: none;
-  position: absolute;
-  top: 75%;
-
+  width: 500px;
+  margin: auto;
+  margin-bottom: 15px;
 }
 
-textarea {
-  resize: none;
-  box-sizing: border-box;
-  font-family: inherit;
-  border: 2px solid;
-  border-radius: 4px;
-  box-shadow: 0 0 0 1px;
-  align-items: center;
-  top: 15%
-}
-
-.review-label {
-  color:#E53935;
-  font-family: 'Archivo', sans-serif;
-  font-weight: inherit;
-}
  .restaurant-details {
    background-color: #FFFFFF ;
    padding: 0.8em 0.8em 0.8em 0.8em;
@@ -68,17 +46,9 @@ textarea {
    margin-right: 33%;
    margin-bottom: 15px;
    margin-top: 15px;
-   top: 40px; 
+   top: 120px; 
    position: absolute;
  }
-
- h5.errors {
-   text-align: center;
-   font-family: 'Archivo', sans-serif;
-   color: #C0392B  ;
-   font-size: 2em;
-   top: 5px;
-}
 
 .review-items {
   text-align: center;
@@ -102,10 +72,9 @@ margin: auto;
 font-size: 2em;
 color: #E74C3C ;
 float: left;
-top: 220px;
 position: absolute;
 left: 105px;
-top: 45px;
+top: 14px;
 }
 
 .yelp-ol {
@@ -134,3 +103,34 @@ input.actions {
   padding: 8px 14px;
   margin-top: 10px;
 }
+
+label textarea {
+  height: 100px;
+  width: 500px;
+}
+
+form input {
+  background-color: #0D47A1;
+  border: 1px solid #000080;
+  border-radius: 8px !important;
+  color: #ffffff;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+}
+
+form input:hover {
+  cursor: pointer;
+  opacity: 85%;
+}
+
+.errors {
+  width: 500px;
+  margin: 15px auto 5px;
+  font-size: .85em;
+  font-style: italic;
+  color: red;
+  text-align: center;
+  font-size: 2em;
+  
+}
+

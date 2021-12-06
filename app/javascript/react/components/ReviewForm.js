@@ -28,13 +28,14 @@ const ReviewForm = (props) => {
   }
 
   return (
-    <form className="r-review" onSubmit={onSubmitHandler} >
-      <div className="review-form">
-        <label className="review-label" htmlFor="review"> Write review here:</label> <br />
-        <textarea cols="60" rows="5" type="text" name="body" onChange={handleInputChange} value={review.body} /> <br />
-        <input className="actions" type="submit" value="Submit" />
-      </div>
+    <form className="review-form" onSubmit={onSubmitHandler} >
+      <label> Write review here:
+        <textarea name="body" onChange={handleInputChange} value={review.body} /> <br />
+      </label>
+       
+      <input  type="submit" value="Submit" />
     </form>
+    
   )
 }
 
