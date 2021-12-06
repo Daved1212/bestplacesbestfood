@@ -37,7 +37,9 @@ p.restaurant-description, p.restaurant-location{
   width: 800px;
   height: 20px;
   outline: none;
-  position: relative;
+  position: absolute;
+  top: 75%;
+
 }
 
 textarea {
@@ -74,7 +76,8 @@ textarea {
    text-align: center;
    font-family: 'Archivo', sans-serif;
    color: #C0392B  ;
-   font-size: 3em;
+   font-size: 2em;
+   top: 5px;
 }
 
 .review-items {
@@ -121,4 +124,13 @@ list-style: none;
 
 .yelp-br {
   clear: left;
+}
+
+input.actions {
+  background-color: #000080;
+  border: 1px solid #000080;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 8px 14px;
+  margin-top: 10px;
 }
